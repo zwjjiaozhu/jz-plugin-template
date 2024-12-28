@@ -1,0 +1,34 @@
+{
+  "name": "trans-huoshan-plugin",
+  "label": "火山翻译*",
+  "logo": "huoshan.png",
+  "category": "translate",
+  "meta": {
+    "version": "0.0.3",
+    "summary": "火山翻译官网接口，日常使用一般没问题~",
+    "author": "梦幻之翼",
+    "updatedAt": "2024-12-28",
+    "homepage": "https://xxx.com"
+  },
+  "form": {
+    "api": "crx"
+  },
+  "sections": {
+    "form": [
+      {
+        "type": "select",
+        "label": "接口",
+        "value": "api",
+        "options": [
+          {
+            "label": "浏览器插件接口",
+            "value": "crx"
+          }
+        ]
+      }
+    ]
+  },
+  "msgs": [
+    "翻译速度很快，质量也很好，推荐使用"
+  ]
+}

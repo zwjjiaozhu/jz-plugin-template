@@ -1,0 +1,12 @@
+{
+  "name": "jz-plugin-template",
+  "version": "1.0.0",
+  "description": "饺子翻译插件开发模版",
+  "license": "ISC",
+  "author": "西园公子",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

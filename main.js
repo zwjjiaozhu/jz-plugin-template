@@ -4,16 +4,20 @@ import CryptoJS from 'crypto-js';
 import { jzAxios } from "./lib.js"
 import { main as huoshan_main } from "./trans-huoshan-plugin/main.js"
 
-global.CryptoJS = CryptoJS
-global.jzAxios = jzAxios
+let objects = {
+    jzPluginServerUrl: "http://127.0.0.1:8648/proxy/http",
+    jzAxios: jzAxios,
+    cryptoJS: CryptoJS,
+}
 
 
 function TestTranslate() {
     console.log("start...");
-    let text = "你的名字"
+    let texts = ["你的名字是最好的"]
     let kwargs = {"sl": "auto", "tl": "en"}
     let form = {}
-    let res = huoshan_main(text, kwargs, form).then((res) => {
+
+    let res = huoshan_main(texts, kwargs, form, objects).then((res) => {
         console.log("res:", res);
     });
 }

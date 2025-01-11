@@ -1,7 +1,7 @@
 {
   "name": "jz-plugin-template",
   "version": "1.0.0",
-  "description": "饺子翻译插件开发模版",
+  "description": "饺子翻译软件插件开发模版",
   "license": "ISC",
   "author": "西园公子",
   "type": "module",

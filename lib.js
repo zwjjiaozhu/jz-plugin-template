@@ -3,7 +3,7 @@ import axios from "axios";
 // export const FetchEventSource = fetchEventSource;
 
 export const jzAxios = axios.create({
-    timeout: 10000, // 设置请求超时时间
+    timeout: 20000, // 设置请求超时时间
     headers: {common: {"Cache-control": "no-cache"}}
     // headers: {common: {Authorization: useTokenStore().token}}
 })

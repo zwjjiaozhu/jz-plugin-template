@@ -5,11 +5,12 @@ let targetLanName = {
     "it": "it", "ko": "ko", "pt_pt": "pt", "pt_br": "pt", "ru": "ru",
 }
 let lastReqId = 1314
-let globalWindow  = typeof window !== "undefined" ? window : global
+// let jzWindow  = typeof window !== "undefined" ? window : global
 
-export function main(texts, config, form) {
-    console.log("translate", config);
-    const proxyUrl = globalWindow.jzPluginServerUrl
+export function main(texts, config, form, jzObjects) {
+    const { jzAxios, jzPluginServerUrl } = jzObjects;
+    // console.log("translate", config);
+    const proxyUrl = jzPluginServerUrl
     const body = {
         url: crxApiUrl,
         method: "post",
@@ -24,9 +25,9 @@ export function main(texts, config, form) {
         }
     }
     // console.log("body:", body)
-    return globalWindow.jzAxios.post(proxyUrl, body, {}).then(result => {
-        console.log("hello world", result)
+    return jzAxios.post(proxyUrl, body, {}).then(result => {
         let data = result.data
+        // console.log("hello world", result.data)
         return {
             code: 0,
             msg: "",
@@ -36,6 +37,6 @@ export function main(texts, config, form) {
             }
         }
     }).catch(err => {
-        return JSON.stringify(err.response?.data)
+        return "Error:" + JSON.stringify(err.response?.data)
     })
 }
